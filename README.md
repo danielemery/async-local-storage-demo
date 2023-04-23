@@ -7,3 +7,9 @@ Code example to go along with a short presentation on the node async local stora
 ```
 npm run simple-number-example
 ```
+
+## Express Example
+
+```
+npm run express-example
+```
