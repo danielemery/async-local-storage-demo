@@ -4,6 +4,7 @@
   "description": "Code example to go along with a short presentation on the node async local storage api",
   "main": "index.js",
   "scripts": {
+    "simple-number-example": "ts-node src/simple-number-example.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
