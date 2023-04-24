@@ -17,3 +17,11 @@ Example using async local storage with express. Stores the request id in async l
 ```
 npm run express-example
 ```
+
+## Multiple Instance Example
+
+Example using multiple instances of async local storage.
+
+```
+npm run multiple-instance-example
+```

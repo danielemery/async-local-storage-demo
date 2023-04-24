@@ -7,6 +7,7 @@
     "build": "tsc",
     "simple-number-example": "ts-node --files src/simple-number-example.ts",
     "express-example": "ts-node --files src/express-example.ts",
+    "multiple-instance-example": "ts-node --files src/multiple-instance-example.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
