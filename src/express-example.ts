@@ -1,5 +1,5 @@
 import { AsyncLocalStorage } from "node:async_hooks";
-import express, { Request, Response, NextFunction } from "express";
+import express from "express";
 import { v4 as uuidv4 } from "uuid";
 
 const app = express();
@@ -13,18 +13,18 @@ const asyncLocalStorage = new AsyncLocalStorage<RequestContext>();
 
 app.use((req, res, next) => {
   const cid = uuidv4();
-  (req as any).cid = cid; // TODO add proper express request type merging
+  req.cid = cid;
   asyncLocalStorage.run({ cid }, () => {
     next();
   });
 });
 
-app.get("/", (req: Request, res: Response) => {
+app.get("/", (req, res) => {
   exampleLoggerFunction("Serving a request at /");
 
   exampleServiceFunction();
 
-  res.send(`CID: ${(req as any).cid}`); // TODO add proper express request type merging
+  res.send(`CID: ${req.cid}`);
 });
 
 app.listen(port, () => {
