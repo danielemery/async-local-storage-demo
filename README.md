@@ -2,6 +2,8 @@
 
 Code example to go along with a short presentation on the node async local storage api.
 
+Async local storage was first added in node 12.17.0 as an experimental feature. It was made stable in node v16.4.0.
+
 ## Simple Number Example
 
 Simple example storing a counter in async local storage and incrementing it on each call.
